@@ -17,12 +17,9 @@ const Footer: React.FC = () => (
         <div className="text-sm space-y-1">
           <div><a href="tel:+380673276097" className="underline">+380673276097</a> <span className="text-xs text-neutral-400">(вайбер, телеграм)</span></div>
           <div><a href="tel:+380675373847" className="underline">+380675373847</a> <span className="text-xs text-neutral-400">(телеграм, вайбер)</span></div>
-          <div><a href="tel:+380679094120" className="underline">+380679094120</a></div>
-          <div><a href="tel:+380679700501" className="underline">+380679700501</a></div>
         </div>
         <div className="text-sm mt-2 space-y-1">
           <div><a href="mailto:izmailmd80@gmail.com" className="underline">izmailmd80@gmail.com</a></div>
-          <div><a href="mailto:info@izmailovamaryna.com.ua" className="underline">info@izmailovamaryna.com.ua</a></div>
         </div>
       </div>
       {/* Події */}
@@ -39,7 +36,7 @@ const Footer: React.FC = () => (
         <div className="uppercase text-sm tracking-widest border-b border-neutral-700 pb-2 mb-4">Сервіси</div>
         <ul className="space-y-2">
           <li><a href="https://izmailovamaryna.com.ua/івент-послуги" className="hover:underline">Івент-послуги</a></li>
-          <li><a href="https://izmailovamaryna.com.ua/благодійна-ініціатива-подаруй-дитині-посмішку" className="hover:underline">Благодійна ініціатива</a></li>
+          <li><a href="https://izmailovamaryna.com.ua/про-нас/благодійна-ініціатива-подаруй-дитині-посмішку" className="hover:underline">Благодійна ініціатива</a></li>
         </ul>
       </div>
       {/* Про нас */}

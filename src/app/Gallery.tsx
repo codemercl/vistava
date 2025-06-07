@@ -4,32 +4,26 @@ const galleryItems = [
   {
     src: "/images/1.jpg",
     alt: "Фото 1 з вистави",
-    title: "Фото 1",
   },
   {
     src: "/images/2.jpg",
     alt: "Фото 2 з вистави",
-    title: "Фото 2",
   },
   {
     src: "/images/3.jpg",
     alt: "Фото 3 з вистави",
-    title: "Фото 3",
   },
   {
     src: "/images/4.jpg",
     alt: "Фото 4 з вистави",
-    title: "Фото 4",
   },
   {
     src: "/images/5.jpg",
     alt: "Фото 5 з вистави",
-    title: "Фото 5",
   },
   {
     src: "/images/6.jpg",
     alt: "Фото 6 з вистави",
-    title: "Фото 6",
   }
 ];
 
@@ -46,7 +40,6 @@ const Gallery: React.FC = () => (
             loading="lazy"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/0 p-4">
-            <div className="text-lg md:text-xl font-bold text-white mb-1">{item.title}</div>
           </div>
         </div>
       ))}
