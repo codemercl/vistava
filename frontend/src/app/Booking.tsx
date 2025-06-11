@@ -9,7 +9,7 @@ type Show = {
   buyLink: string;
 };
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api/shows";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://rozdyahaysyapohovorymo.com.ua/api/shows";
 
 const isShow = (item: unknown): item is Show => {
   if (typeof item !== 'object' || item === null) return false;
