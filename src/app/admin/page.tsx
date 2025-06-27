@@ -13,7 +13,7 @@ type Show = {
 
 const initialShows: Show[] = [];
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api/shows";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://vistava-backend.vercel.app/api/shows";
 
 const AdminPage: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
