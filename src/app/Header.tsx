@@ -53,16 +53,19 @@ const Header: React.FC = () => {
             ))}
           </ul>
           {/* Кнопка */}
-          <a
-            href="https://secure.wayforpay.com/payment/s20aef53e791e"
+          <button
+            onClick={() => {
+              const bookingSection = document.getElementById('booking');
+              if (bookingSection) {
+                bookingSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="hidden md:inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded shadow hover:bg-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 transition-colors duration-200"
             tabIndex={0}
             aria-label="Придбати квиток"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Придбати квиток
-          </a>
+          </button>
           {/* Мобильное меню */}
           <button
             className="md:hidden flex items-center justify-center w-10 h-10 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
