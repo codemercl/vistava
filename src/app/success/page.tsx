@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-const SuccessPage = () => {
+const SuccessContent = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   const searchParams = useSearchParams();
   const [paymentData, setPaymentData] = useState<Record<string, string> | null>(null);
@@ -77,12 +77,6 @@ const SuccessPage = () => {
           <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-3 text-gray-900 tracking-tight font-sans">Покупку здійснено успішно!</h1>
           <p className="text-center text-lg md:text-xl text-gray-700 mb-8 font-medium">Чекаємо на вас на виставці.<br />Дякуємо за довіру!</p>
 
-          <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
-            <p className="text-sm text-green-700 text-center">
-              Дані платежу отримано успішно
-            </p>
-          </div>
-
           <Link
             href="/"
             className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-extrabold text-lg md:text-xl py-3 px-8 rounded-xl shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 transition-colors duration-200"
@@ -94,6 +88,21 @@ const SuccessPage = () => {
         </div>
       }
     </main>
+  );
+};
+
+const SuccessPage = () => {
+  return (
+    <Suspense fallback={
+      <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-yellow-50 via-white to-yellow-100 px-4 py-10">
+        <div className="flex flex-col items-center bg-white/90 rounded-3xl shadow-2xl p-8 md:p-12 max-w-lg w-full border border-yellow-100">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-400 mb-6"></div>
+          <p className="text-gray-600">Завантаження...</p>
+        </div>
+      </main>
+    }>
+      <SuccessContent />
+    </Suspense>
   );
 };
 
